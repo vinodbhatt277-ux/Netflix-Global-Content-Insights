@@ -8,6 +8,8 @@ The dashboard provides an interactive view of Netflix content across content typ
 
 ## Dashboard
 
+![Netflix Global Content Insights Dashboard](Dashboard..png)
+
 ### Key KPIs
 - Total Titles
 - Total Movies
