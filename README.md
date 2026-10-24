@@ -137,10 +137,6 @@ Netflix Global Content Insights/
 └── dashboard-preview.png
 ```
 
-The filenames above should match the actual files in the repository. If
-the image or dataset has a different filename, update this section
-accordingly.
-
 ## How to Use
 
 1.  Download or clone the repository.
