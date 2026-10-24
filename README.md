@@ -10,7 +10,7 @@ interactive visualization, and KPI reporting in Power BI.
 
 ## Dashboard
 
-![Netflix Global Content Insights Dashboard](Dashboard.png)
+![Netflix Global Content Insights Dashboard](Dashboard..png)
 
 ### Key KPIs
 
