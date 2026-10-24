@@ -134,7 +134,7 @@ Netflix Global Content Insights/
 ├── Netflix_Global_Content_Insights_Dashboard.pbix
 ├── netflix_titles(3).csv
 ├── README.md
-└── dashboard-preview.png
+└── Dashboard..png
 ```
 
 ## How to Use
@@ -143,7 +143,7 @@ Netflix Global Content Insights/
 2.  Open `Netflix_Global_Content_Insights_Dashboard.pbix` in Power BI
     Desktop.
 3.  If Power BI asks for the source file location, select
-    `netflix_titles(3).csv`.
+    `netflix_titles.csv`.
 4.  Use the Type, Year Added, and Country filters to explore the
     dashboard.
 
