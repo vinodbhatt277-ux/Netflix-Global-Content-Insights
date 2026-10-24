@@ -132,7 +132,7 @@ dashboard before using them in an interview or presentation.
 ``` text
 Netflix Global Content Insights/
 ├── Netflix_Global_Content_Insights_Dashboard.pbix
-├── netflix_titles(3).csv
+├── netflix_titles.csv
 ├── README.md
 └── Dashboard..png
 ```
