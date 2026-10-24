@@ -10,11 +10,7 @@ interactive visualization, and KPI reporting in Power BI.
 
 ## Dashboard
 
-![Netflix Global Content Insights Dashboard](dashboard-preview.png)
-
-> **Repository check:** Ensure the image file in the repository is named
-> `dashboard-preview.png`. If the existing image has a different
-> filename, update this image link to match the exact filename.
+![Netflix Global Content Insights Dashboard](Dashboard.png)
 
 ### Key KPIs
 
