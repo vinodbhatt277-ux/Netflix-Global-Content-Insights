@@ -1,132 +1,170 @@
-# Netflix Global Content Insights Dashboard
+# Netflix Global Content Insights Dashboard --- Power BI
 
 ## Project Overview
 
-This project is a Power BI dashboard built to analyze Netflix content using a Netflix titles dataset containing **8,807 records and 12 columns**.
-
-The dashboard provides an interactive view of Netflix content across content type, year added, country, genre, duration, and rating.
+This project uses a Netflix titles dataset containing **8,807 records
+and 12 columns** to explore the distribution of Netflix movies and TV
+shows across content type, year added, country, genre, duration, and
+rating. It demonstrates data preparation, data-quality checks,
+interactive visualization, and KPI reporting in Power BI.
 
 ## Dashboard
 
-![Netflix Global Content Insights Dashboard](Dashboard..png)
+![Netflix Global Content Insights Dashboard](dashboard-preview.png)
+
+> **Repository check:** Ensure the image file in the repository is named
+> `dashboard-preview.png`. If the existing image has a different
+> filename, update this image link to match the exact filename.
 
 ### Key KPIs
-- Total Titles
-- Total Movies
-- Total TV Shows
-- Country Count
+
+-   Total Titles
+-   Total Movies
+-   Total TV Shows
+-   Country Count
 
 ### Interactive Analysis
+
 The dashboard includes:
-- Titles Added by Year
-- Titles Added by Genre
-- Titles Added by Country
-- Total Titles by Type
-- Titles Added by Duration
-- Titles Added by Rating
+
+-   Titles Added by Year
+-   Titles Added by Genre
+-   Titles Added by Country
+-   Total Titles by Type
+-   Titles Added by Duration
+-   Titles Added by Rating
 
 ### Filters
-Users can interact with the dashboard using:
-- Type — Movie / TV Show
-- Year Added
-- Country
 
-The filters cross-filter the dashboard visuals to support focused analysis.
+The dashboard includes interactive filters for:
+
+-   **Type** --- Movie / TV Show
+-   **Year Added**
+-   **Country**
+
+These filters support focused exploration of the dashboard visuals.
 
 ## Dataset
 
 **Source file:** `netflix_titles(3).csv`
 
-The dataset contains:
+The dataset contains the following fields:
 
-`show_id`, `type`, `title`, `director`, `cast`, `country`, `date_added`, `release_year`, `rating`, `duration`, `listed_in`, `description`
+`show_id`, `type`, `title`, `director`, `cast`, `country`, `date_added`,
+`release_year`, `rating`, `duration`, `listed_in`, `description`
 
-### Data Quality
+## Data Quality and Preparation
 
-The source dataset contains missing values in several descriptive fields, including director, cast, country, date added, rating, and duration. These are retained where appropriate rather than inventing values.
-
-The dataset was also checked for duplicate records and duplicate `show_id` values.
-
-During Power Query ingestion, quoted line breaks in CSV records required CSV quote-aware parsing so that records were loaded correctly.
+-   Checked for duplicate records and duplicate `show_id` values.
+-   Identified missing values in descriptive fields such as director,
+    cast, country, date added, rating, and duration; missing values were
+    retained where appropriate rather than replaced with invented
+    information.
+-   Used CSV quote-aware parsing during Power Query ingestion because
+    quoted line breaks in CSV records required careful parsing.
 
 ## Tools & Technologies
 
-- Microsoft Power BI Desktop
-- Power Query
-- DAX
-- CSV
-- Kaggle Netflix titles dataset
+-   Microsoft Power BI Desktop
+-   Power Query
+-   DAX
+-   CSV
+-   Kaggle Netflix titles dataset
 
 ## Power BI Concepts Demonstrated
 
-- Data import and transformation
-- Data type management
-- Handling missing values
-- CSV parsing and data-quality validation
-- DAX measures
-- KPI cards
-- Slicers and interactive filtering
-- Cross-filtering between visuals
-- Line charts
-- Bar charts
-- Column charts
-- Donut chart
-- Map visualization
-- Dashboard formatting and layout
+-   Data import and transformation
+-   Data type management
+-   Handling missing values
+-   CSV parsing and data-quality validation
+-   DAX measures and KPI cards
+-   Slicers and interactive filtering
+-   Cross-filtering between visuals
+-   Line, bar, and column charts
+-   Donut chart and map visualization
+-   Dashboard formatting and layout
 
 ## Business Questions
 
-The project is aligned with the Netflix analysis objectives supplied with the project, including:
+The broader Netflix analysis objectives associated with the project
+include:
 
-1. Count the number of Movies vs TV Shows.
-2. Find the most common rating for movies and TV shows.
-3. List movies released in a specific year.
-4. Find the top countries with the most Netflix content.
-5. Identify the longest movie.
-6. Find content added in the last five years.
-7. Find movies/TV shows by a specified director.
-8. List TV shows with more than five seasons.
-9. Count content items by genre.
+1.  Count movies versus TV shows.
+2.  Identify common ratings for movies and TV shows.
+3.  List movies released in a specified year.
+4.  Find countries with the most Netflix content.
+5.  Identify the longest movie.
+6.  Find content added in the last five years.
+7.  Find movies or TV shows by a specified director.
+8.  List TV shows with more than five seasons.
+9.  Count content items by genre.
 10. Analyze yearly average content releases in India.
 11. Identify documentary movies.
 12. Find content without a director.
 13. Analyze appearances by a specified actor.
-14. Find actors with the highest number of appearances in Indian-produced movies.
-15. Categorize content based on the presence of the keywords `kill` and `violence` in descriptions.
+14. Find actors with the highest number of appearances in
+    Indian-produced movies.
+15. Categorize content based on the presence of the keywords `kill` and
+    `violence` in descriptions.
 
-The current Power BI dashboard focuses on the visual analysis areas represented by its KPIs, charts, map, and slicers.
+**Scope note:** The current Power BI dashboard focuses on the visual
+analysis represented by its KPIs, charts, map, and slicers. The list
+above describes the broader analysis objectives and should not be read
+as a claim that every question is answered by the dashboard itself.
 
-## Key Dashboard State
+## Dashboard Values and Interpretation
 
-With no filters selected, the dashboard displays approximately:
+The existing project notes report the following approximate unfiltered
+dashboard values:
 
-- **9K Total Titles**
-- **6K Movies**
-- **3K TV Shows**
-- **749 Country Count**
+-   **9K Total Titles**
+-   **6K Movies**
+-   **3K TV Shows**
+-   **749 Country Count**
 
-The dashboard was also validated using filtered scenarios, including Movie, TV Show, and TV Show + India selections.
+The dashboard was also checked using filtered scenarios, including
+Movie, TV Show, and TV Show + India selections.
+
+The `country` field can contain multiple country names in a single
+source record. Therefore, **Country Count** represents distinct
+values/entries in the source field rather than a normalized count of
+individual countries. Verify the displayed values against the current
+dashboard before using them in an interview or presentation.
 
 ## Project Structure
 
-```text
+``` text
 Netflix Global Content Insights/
-│
 ├── Netflix_Global_Content_Insights_Dashboard.pbix
 ├── netflix_titles(3).csv
 ├── README.md
 └── dashboard-preview.png
 ```
 
+The filenames above should match the actual files in the repository. If
+the image or dataset has a different filename, update this section
+accordingly.
+
 ## How to Use
 
-1. Download or clone the project.
-2. Open `Netflix_Global_Content_Insights_Dashboard.pbix` in Power BI Desktop.
-3. If Power BI asks for the source file location, select `netflix_titles(3).csv`.
-4. Use the Type, Year Added, and Country filters to explore the dashboard.
+1.  Download or clone the repository.
+2.  Open `Netflix_Global_Content_Insights_Dashboard.pbix` in Power BI
+    Desktop.
+3.  If Power BI asks for the source file location, select
+    `netflix_titles(3).csv`.
+4.  Use the Type, Year Added, and Country filters to explore the
+    dashboard.
 
-## Notes
+## Key Takeaways and Business Interpretation
 
-The `country` field can contain multiple country names in a single source record. Therefore, the dashboard's **Country Count** represents distinct values/entries in the source field rather than a normalized count of individual countries.
+Use the dashboard to examine content mix, genre and country
+distribution, ratings, durations, and yearly additions. Any specific
+business takeaway should be based on the actual visuals and filter
+selections. This README does not invent numerical trends or conclusions
+that are not documented in the project materials.
 
-This project is intended as a portfolio demonstration of practical Power BI data analysis and dashboard development.
+## Project Objective
+
+Demonstrate practical skills in Power BI data preparation, data-quality
+validation, DAX measures, KPI reporting, interactive dashboards, and
+exploratory analysis of a real-world content catalogue.
